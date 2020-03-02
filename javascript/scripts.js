@@ -42,3 +42,43 @@ var inputValue = prompt("Enter your name "); {
      console.log ( ":(" + inputValue + ":)" );
  } 
 }
+//If statement...
+var a;
+var b;
+if ( a === b) {
+    console.log( "a is identical to b.");
+} else {
+    console.log ( "a and b are not identical");
+}
+//Converting to ternary....
+/* Syntax is 
+*condition ? logic for true : logic for False
+*/
+(a===b) ? console.log ("a is identical to b.") : console.log( "a and b are not identical"); 
+
+// A while loop takes a condition.
+var i = 0;
+while (i <6 ) {
+    console.log( "While loop:" +i);
+    i++; // Make sure the condition will eventually be FALSE, or the loop will go on FOREVER
+}
+
+//Foreach ?! It is a method of the array datatype
+myArray.forEach( function(arrayItem) {
+    console.log ( "Array item is " +arrayItem);
+
+} );//closing paranthesis is from function opening - this is called an "anonymous array"
+
+/*
+*Let's give objects a shot!
+*/
+var myObject = {
+    name:      "Bob",
+    age:        32,
+    hobbies:    [
+            "sports",
+            "movies",
+            "hiking"
+    ]
+}
+ console.log("Hello! My name is" + myObject.name+". I am " +myObject.age+" years old, and one of my hobbies is:" +myObject.hobbies[1]);
