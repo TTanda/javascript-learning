@@ -52,7 +52,7 @@ console.log ( myString);
  * SWITCH (CASE) statements
  */
 var mathOperation = "add";
-
+//
 switch (mathOperation) {
     case "add":
         console.log ( 5+ 5 );
@@ -119,5 +119,22 @@ var num2Input = document.getElementById
 var operatorValue = operatorInput.value;
 var num1Value = num1Input.value;
 var num2Value = num2Input.value;
-});//this means when submit happens, then the function of the calculator happens
+//this means when submit happens, then the function of the calculator happens
 
+var result = 0;
+//Let's run our math!
+switch (operatorValue ) {
+    case "add":
+        result = num1Value + num2Value;
+        break; //this causes it to execute until it gets to a break.  If you take it away, the operation will continue.  It starts at first matching value, then continues until break is reached.
+    case "subtract":
+        result = num1Value - num2Value;
+        break;
+    case "divide": 
+    result = num1Value / num2Value;
+        break;
+    case "multiply":
+        result = num1Value * num2Value;;
+        break;
+}
+});
