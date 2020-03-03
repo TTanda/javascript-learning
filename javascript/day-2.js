@@ -26,20 +26,25 @@ console.log( myNumber + 6 ); //Concatenation again
  */
 var myString = "Hello World!";
 console.log ("Test1:");
+console.log ("Type is: "+(typeof myString) );
 console.log ( myString);
 
 myString = 5;
 console.log ("Test 2:");
+console.log ("Type is: "+(typeof myString) );
 console.log ( myString);
 
 myString = myString*3;
 console.log ("Test 3:");
+console.log ("Type is: "+(typeof myString) );
 console.log ( myString);
 
 myString = "Updated string.";
 console.log ( "Test 4:");
+console.log ("Type is: "+(typeof myString) );
 console.log (myString);
 
 myString = {"another" : "string test!?"};
 console.log ("Test 5:");
+console.log ("Type is: "+(typeof myString) );
 console.log ( myString);
