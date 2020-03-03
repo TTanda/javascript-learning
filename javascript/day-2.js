@@ -107,13 +107,13 @@ targetLink.textContent = "Go Back Home";
  */
 var calculatorForm = document.getElementById ("calculator");
 
-calculatorForm.addEventListener("submit", function (event) {
+calculatorForm.addEventListener( "submit", function (event) {
     event.preventDefault(); //STOP the submission
 
 //Collect the form fields (DOM)
 var operatorInput = document.getElementById ("operator");
 var num1Input = document.getElementById ("num1");
-var num2Input = document.getElementById
+var num2Input = document.getElementById ("num2");
 
 // Retrieve the values from the form fields
 var operatorValue = operatorInput.value;
@@ -125,16 +125,20 @@ var result = 0;
 //Let's run our math!
 switch (operatorValue ) {
     case "add":
-        result = num1Value + num2Value;
+        result = +num1Value + +num2Value;
         break; //this causes it to execute until it gets to a break.  If you take it away, the operation will continue.  It starts at first matching value, then continues until break is reached.
     case "subtract":
         result = num1Value - num2Value;
         break;
     case "divide": 
-    result = num1Value / num2Value;
+        result = num1Value / num2Value;
         break;
     case "multiply":
-        result = num1Value * num2Value;;
+        result = num1Value * num2Value;
         break;
-}
-});
+}//end of switch.
+
+var resultElement = document.getElementById("result");
+resultElement.textContent = result; //show the result in our element.
+
+});//end of eventListener.
