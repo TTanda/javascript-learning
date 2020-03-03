@@ -1,5 +1,6 @@
 body {
-    background-image: linear-gradient(to right, rgb(191, 241, 243), rgb(192, 147, 235), rgb(236, 173, 184));
+    background-image: linear-gradient(to right,rgb(173, 233, 146),rgb(248, 232, 159), rgb(191, 241, 243), rgb(192, 147, 235), rgb(236, 173, 184));
+    color: rgb(53, 53, 114)
 }
 .my-link {
     color:red;
