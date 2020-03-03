@@ -48,3 +48,26 @@ myString = {"another" : "string test!?"};
 console.log ("Test 5:");
 console.log ("Type is: "+(typeof myString) );
 console.log ( myString);
+/**
+ * SWITCH (CASE) statements
+ */
+var mathOperation = "add";
+
+switch (mathOperation) {
+    case "add":
+        console.log ( 5+ 5 );
+        break;
+    case "subtract":
+        console.log ( 5 - 5 );
+        break;
+    case "divide": 
+        console.log ( 5/5);
+        break;
+    case "multiply":
+        console.log (5*5);
+        break;
+    default:
+        console.log ("No operator provided.");
+        break;
+    
+}
