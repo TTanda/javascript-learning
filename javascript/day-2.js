@@ -56,7 +56,7 @@ var mathOperation = "add";
 switch (mathOperation) {
     case "add":
         console.log ( 5+ 5 );
-        break;
+        break; //this causes it to execute until it gets to a break.  If you take it away, the operation will continue.  It starts at first matching value, then continues until break is reached.
     case "subtract":
         console.log ( 5 - 5 );
         break;
@@ -68,6 +68,34 @@ switch (mathOperation) {
         break;
     default:
         console.log ("No operator provided.");
-        break;
-    
+        break; 
 }
+/**
+ * Let's manipulate things in the DOM! (Document Object Model)
+ */
+var myParagraph = document.getElementById ("my-paragraph");
+console.log (myParagraph);
+
+myParagraph.textContent = "Hello, world! ";
+myParagraph.textContent += " Also, hey how are ya'?";
+//Create a BRAND NEW ELEMENT.  It won't show up yet, but we can start manipulating it before we inject it into our webpage!
+var newParagraph = document.createElement("p");
+newParagraph.textContent = "This paragraph was created completely in JavaScript! Wowie! Zounds! Gadzooks!";//Populate your element
+//Add your element to the document body!
+document.body.appendChild ( newParagraph );
+
+var otherNewParagraph = document.createElement ("p");
+
+otherNewParagraph.textContent = " Second new paragraph.";
+otherNewParagraph.style.color = "darkgray";
+
+var myFirstLink = document.createElement ("A"); //  a link
+myFirstLink.textContent = "Click Here!";
+myFirstLink.href = "./index.html";
+myFirstLink.title = "Return to Homepage.";
+myFirstLink.style.color = "red";
+//We're adding the link INTO our brand new paragraph BEFORE it even goes to the browser!
+otherNewParagraph.appendChild (myFirstLInk );
+
+// Now, our paragraph with TEXT and a LINK both, will be added to the body!
+document.body.appendChild (otherNewParagraph );
