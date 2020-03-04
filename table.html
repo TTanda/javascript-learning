@@ -8,50 +8,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style/style.css">
-    <script type="text/javascript" src="./javascript/table.js" defer></script</script>
+    <script type="text/javascript" src="./javascript/table.js" defer></script>
 
 </head>
 <body>
     <h1>Table</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Class</th>
-                    <th>City</th>
-                </tr>
-            </thead>
-            <tbody>
-                <form id="table" action ="#" method="get"></form>
-                    
+    <form id="table-form" action="#" method="GET">
+                
                     <label for="name">
                         Enter Name:
-                        <input name="name" id="name" type="string">
+                        <input name="name" id="name" type="text">
                      </label>
                      <label for="age">
                         Enter Age:
                         <input name="age" id="age" type="number">
                      </label>
-                     <label for="class">
+                     <label for="school-class">
                         Enter Class:
-                        <input name="class" id="class" type="string">
+                        <input name="school-class" id="school-class" type="text">
                      </label>
                      <label for="city">
                         Enter City:
-                        <input name="city" id="city" type="string">
+                        <input name="city" id="city" type="text">
                      </label>
-                     <button type="submit" id="addtotable">
+                     <button type="submit">
                          Add to table
                      </button>
                 </form>
-                </label>
-
-
+        <table >
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr>
+                   <td></td> 
+                   <td></td>
+                   <td></td> 
+                   <td></td>             
+                </tr>
 
             </tbody>
         </table>
-
+        </body>
+</html>
 
 
 
