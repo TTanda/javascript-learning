@@ -26,3 +26,45 @@ console.log( myVariable );
 /**
  * Other types?
  */
+var myArrayofDataTypes = [
+    //Booleans:
+    true,
+    false,
+    //Null:
+    null,
+    // Number (float/integer):
+    34,
+    168.793,
+    // String:
+    "Hello, World !",
+    //Value not defined:
+    undefined,
+    //Not a number:
+    NaN,
+    // An array in array:
+    [1,2,3,4,5]
+];
+
+/**
+ * Creating elements for a webpage. (Adding to the DOM!)
+ */
+// Create a datalist.
+var myDataList =  document.createElement( "DL"); // Won't show yet! We didn't tell it where to go.
+// Let's loop through the array so we don't have to type out each item
+
+// for ( ASSIGNMENT; TERMINATION CONDITION; ITERATION)
+for (var i=0; i < myArrayofDataTypes.length; i++ ) {
+    //Create datalist title.
+var dataListTitle = document.createElement( "DT" );
+dataListTitle.textContent = typeof myArrayofDataTypes[i]; // Output the datatype.
+
+// Create datalist data.
+var dataListData = document.createElement( "DD");
+dataListData.textContent = myArrayofDataTypes[i];
+
+// Add our new elements to our datalist.
+myDataList.appendChild( dataListTitle );
+myDataList.appendChild( dataListData );
+
+}
+
