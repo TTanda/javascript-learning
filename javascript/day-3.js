@@ -78,3 +78,33 @@ document.body.innerHTML += ` <!-- Back ticks are used in JS for multi-line strin
 // Add ALL of that to the body, and now you should be able to see it!
 document.body.appendChild ( myDataList );
 
+/*
+*Collecting elements
+*/
+
+var myheading = document.getElementById( "myHeading");
+myHeading.title = "This is a heading."; //Tooltip attribute
+//myHeading.style.color = "darkgray"; // PLEASE avoid using inline styles .... this is the CSS file's job!
+
+myHeading.className = "gray-text"; // Uses classes instead1
+
+/**
+ * Events!
+ */
+
+ myHeading.addEventListener( "mouseover"/* Here we say which event we are targeting. */, function ( event/* We can capture infor about the event*/ ) {
+     this.className = "salmon-text"; /* In an event, the "this"keyword represents our element (myHeading). */
+ } );
+     myHeading.addEventListener( "mouseleave"/* Here we say which event we are targeting. */, function ( event/* We can capture infor about the event*/ ) {
+        this.className = "indigo-text"; /* In an event, the "this"keyword represents our element (myHeading). */
+ } );
+
+ myHeading.addEventListener( "click", function ( event ) {
+     var bigClass = "big-text";
+     if ( !this.className.includes( bigClass) )  // Good to do checks like this so we don't have 500 of the same class on here is the user keeps clicking.
+     
+    { //Exclamation means NOT.  So it fires on the OPPOSITE.
+    this.className += " big-text" ; // Concatenating a new class! 
+    // Remember, you must have a space between classes when assigning multiple.
+    }
+} );

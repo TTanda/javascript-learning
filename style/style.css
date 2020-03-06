@@ -1,4 +1,17 @@
-body {
-  background-color: rgb(191, 241, 243);
- color: rgb(85, 85, 192);
+
+.gray-text { /* American spelling makes Warren sad :( */
+    color: f=darkgray;
+}
+
+.salmon-text {
+    color: salmon;
+}
+
+.indigo-text {
+    color: indigo;
+
+}
+
+.big-text {
+    font-size: 2.25rem;
 }
