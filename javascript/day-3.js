@@ -62,9 +62,19 @@ dataListTitle.textContent = typeof myArrayofDataTypes[i]; // Output the datatype
 var dataListData = document.createElement( "DD");
 dataListData.textContent = myArrayofDataTypes[i];
 
-// Add our new elements to our datalist.
+// Add our new elements to our datalist. DOM manipulation.
 myDataList.appendChild( dataListTitle );
 myDataList.appendChild( dataListData );
 
 }
+
+var myHeadingText = "Our Data-Type Test:";
+// This is adding HTML to the end of our body.
+document.body.innerHTML += ` <!-- Back ticks are used in JS for multi-line strings. -->
+ <h2>
+   `+myHeadingText/*Concatenating Strings!*/+`
+  </h2>
+`
+// Add ALL of that to the body, and now you should be able to see it!
+document.body.appendChild ( myDataList );
 
