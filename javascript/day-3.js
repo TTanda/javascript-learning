@@ -171,4 +171,45 @@ myHeading.className = "gray-text"; // Uses classes instead1
     myNav.classList.toggle( "nav-open" );
 
 
- });
+ } );
+
+ /**
+  * Let's dig in to objects!
+  */
+/* JavaScript Object Notation (JSON)*/
+  var myObject = { /* valid JSON format. */
+    name: "Jerry",
+    age: 61,
+    hobbies: [
+      "snowboarding",
+      "action movies",
+    ]
+  } ;
+  console.log( myObject );
+
+  console.log( "Object name : " + myObject.name );
+  console.log( "Object age : " + myObject.age );
+  console.log( "Object hobbies: " + myObject.hobbies[0] + "," + myObject.hobbies[1] ) ;
+
+  //Let's add to the hobbies array...
+  myObject.hobbies.push( "programming" );
+  console.log( "Updated hobbies: ");
+  console.log( myObject.hobbies );
+
+  console.log( "Updated object:" );
+  console.log( myObject );
+
+/**
+ * Let's ramp things up a bit with a method.
+ */
+
+ var newObject = {
+    myNum: 5,
+    updateNum: function () { // here is a method! Note the new syntax, versus a function.
+      // Difference from a function?
+     this.myNum = this.myNum + 5;
+     return this.myNum;
+    }
+
+
+ };
