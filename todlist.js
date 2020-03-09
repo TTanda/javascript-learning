@@ -1,9 +1,9 @@
 //Capture the form
-var myForm = document.getElementById ("table-form");
+var myForm = document.getElementById ("todo-form");
 
 function deleteRow( element ) {
-    var tableRow = element.parentNode.parentNode;// go two levels up from button to get row - from tabledata, then to tablerow
-    tableRow.parentNode.removeChild(tableRow); // An element cannot delete itself, so we have to tell the parent to do it for us
+    var todoRow = element.parentNode.parentNode;// go two levels up from button to get row - from tabledata, then to tablerow
+    todoRow.parentNode.removeChild(todoRow); // An element cannot delete itself, so we have to tell the parent to do it for us
 }
 var allButtons = document.querySelectorAll("td > button");    
 for ( var i=0; i < allButtons.length; i++ ) {
@@ -12,16 +12,19 @@ for ( var i=0; i < allButtons.length; i++ ) {
     } );
 
 } 
-#todo  {
-    padding: 5px;
-    margin-bottom: 5px;
-}
 //Listen for a form submission
 myForm.addEventListener( "submit", function (event) {
     //Prevent the form from submitting
     event.preventDefault(); //STOP the submission
 
+//Collect the form fields (DOM)
+var todoitem =document.getElementById ("todo");
 
+
+// Retrieve the values from the form fields
+var todoitemValue= todoitemField.value;
+
+//this means when submit happens, then the function of the table happens
 
 //Create new element (table row)
 var newRow = document.createElement ("TR");
@@ -30,24 +33,6 @@ var nameCell = document.createElement ("TD");
 nameCell.textContent = nameValue; // Add our text to the cell
 
 newRow.appendChild( nameCell ); // Add our cell to the table
-
-
-//Create new cell for the row (table data)
-var ageCell = document.createElement ("TD");
-ageCell.textContent = ageValue; // Add our text to the cell
-newRow.appendChild( ageCell ); // Add our cell to the table
-
-//Create new element (table row)
-//Create new cell for the row (table data)
-var schoolClassCell = document.createElement ("TD");
-schoolClassCell.textContent = schoolClassValue; // Add our text to the cell
-newRow.appendChild( schoolClassCell ); // Add our cell to the table
-
-//Create new element (table row)
-//Create new cell for the row (table data)
-var cityCell = document.createElement ("TD");
-cityCell.textContent = cityValue; // Add our text to the cell
-newRow.appendChild( cityCell ); // Add our cell to the table
 
 // Create our delete button
 var deleteButton=document.createElement("Button");
@@ -62,10 +47,4 @@ newRow.appendChild (actionCell); // This  addes this new cell to the existing ro
 //Target your table body
 var tableBody = document.getElementById ("table-body");
 tableBody.appendChild (newRow);// inject the brand new row, so the user can see it
-
-
-} );
-
- 
-
- 
+}
