@@ -8,23 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="hangman.css">
+    <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barrio&display=swap" rel="stylesheet">
     <script type="text/javascript" src="hangman.js" defer></script</script>
 
 
 
     
 </head>
-<body>
-    <h1>Simple 'Hangman' Game</h1>
-
-<form id="hangman">
-    <input type="text" maxlength="1" minlength="1" name="letter" id="letter" placeholder="Guess a letter" />
-    <input id="guess" name="guess" type="submit" value="Guess" />
-    <button id="restart" name="restart" type="button">Restart</button>
-</form>
-<ul id="letters"></ul>
-<p id="man"></p>
-<p id="output" class="output"></p>
-     </body>
-     </html>
-     
+<div class="wrapper">
+    <h1>Hangman</h1>
+     <p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
+ </div>
+ <div class="wrapper">
+     <div id="buttons">
+     </div>  
+     <div id="hold">
+     </div>
+    <p> Category: </p>
+     <p id="mylives"></p>
+     <p id="clue">Clue -</p>  
+      <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+     <div class="container">
+       <button id="hint">Hint</button>
+       <button id="reset">Play again</button
+     </div>
+ </div>
