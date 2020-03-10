@@ -4,7 +4,7 @@ var activeList = document.querySelector("ul");
 var completedList = document.querySelector("ul:last-of-type");
 
 //Retrieve input
-var newTask = document.querySelector("name="new- task" );
+var newTask = document.querySelector('[name="new-task"]' );
 //Form
 var form = document.querySelector("form");
 
@@ -13,8 +13,9 @@ myForm.addEventListener("submit", function (event) {
 
     //Prevent the form from submitting
     event.preventDefault(); //STOP the submission
+// Add list item into list
 
-    activeList.innerHTML += `
+activeList.innerHTML += `
 <li>
     <input type="checkbox">
     ` + newTask.value + `
@@ -45,5 +46,6 @@ myForm.addEventListener("submit", function (event) {
         newCheckboxbox.addEventListener("click", function (event) {
             li.removeChild(newCheckbox);
             completedList.appendChild(li);
-
-        });
+        } );
+        } 
+    }    );
