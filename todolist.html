@@ -2,24 +2,29 @@
 <html lang=en>
 
 <head>
-    <title>Let's Learn JavaScript (Again!)</title>
+
+    <title>To Do List </title>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style/style.css">
-    <script type="text/javascript" src="./javascript/day-3.js" defer></script>
+    <script type="text/javascript" src="./javascript/todlist.js" defer></script>
 
 </head>
 <body>
-    <h1>Add to To-Dos</h1>
-    <form id="todo-form" action ="#" method="get">
-        <label for="Enter Task">
+    <h1> To-Dos</h1>
+    <form action ="#" method="GET">
+        <h2>To-Do <Form></Form></h2>
+        <label for="new-task">
             Enter Task:
-        <input id="todo" type="text">
+        <input type="text" name="new-task">
         </label>
-        <type="number">
-         </label>
+        <input type="submit" value="Add To-Do">
     </form>
-    
+    <h2> Active To Dos</h2>
+    <ul></ul>
+    <h2>Completed To Dos</h2>
+    <ul></ul>
 </body>
+</html>

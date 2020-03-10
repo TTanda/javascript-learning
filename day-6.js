@@ -12,7 +12,7 @@ function myFunction() {
     console.log(myVariable); //Can we see myVariable in the function !?
 
 
-   // myFunction(); //Let's run it and  see.  Yes!! We can see GLOBALLY scoped variable inside of a function!
+    // myFunction(); //Let's run it and  see.  Yes!! We can see GLOBALLY scoped variable inside of a function!
 
     var myFunctionScopeVariable = 64; //Declared in a local (function) scope.
     console.log(myFunctionScopeVariable); //Can we access it outside of the function!? We can see it if it's inside the function.
@@ -68,8 +68,8 @@ function multiplyNums(x, y) { // Multiplication
 function divideNums(x, y) { // Division.
     return (x / y); // Quotient.
 }
-function myMath(operation ) {
-    switch ( operation ) {
+function myMath(operation) {
+    switch (operation) {
         case "add":
             return addNums; //"Return" kills the function, so breaks are optional here.
         case "substract":
@@ -93,19 +93,19 @@ console.log( newResult );*/
  * Now let's try with anonymous functions.
  */
 
- function newTestFunction ( myString ) {
-    myString = "Entered string is: " +myString;
-    return function ( additionalString ) {
-        if ( additionalString != undefined ) {
-            myString += ","+additionalString;
+function newTestFunction(myString) {
+    myString = "Entered string is: " + myString;
+    return function (additionalString) {
+        if (additionalString != undefined) {
+            myString += "," + additionalString;
         }
-        return function (yetAnotherString ) {
-            if (yetAnotherString != undefined ) {
-                myString += "," +yetAnotherString + "!!!!";
+        return function (yetAnotherString) {
+            if (yetAnotherString != undefined) {
+                myString += "," + yetAnotherString + "!!!!";
             }
             return myString;
         }
     }
- }
+}
 
- console.log ( newTestFunction( "A B C D E F G")( " H I J K L M N O P" )( "Q R S T U V W X Y Z") );
+console.log(newTestFunction("A B C D E F G")(" H I J K L M N O P")("Q R S T U V W X Y Z"));
