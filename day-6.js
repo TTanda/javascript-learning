@@ -44,4 +44,43 @@ function myFunction() {
     //console.log( myFunctionScopeVariable ); Can we see it out here? Nope! The variable is scoped to its origin function, not here...
 
 }
-myFunction(); //Let's run it and see
+myFunction(); //Let's run it and see.
+//console.log( myFunctionScopeVariable ); // Can we acces it outside of the function !? No! Locally scoped variables will live and die in their function
+
+//myNestedFunction(); //Can we run the nested function!? Nope! It is not available globally if it was defined in a localized scope!
+
+/**
+ * Functions returning functions.
+ */
+
+function addNums(x, y) {
+    return (Number(x) + Number(y)); //Using Number() function to make sure we don't end up concatenating!  // Sum.
+}
+
+function substractNums(x, y) { // Substraction.
+    return (x - y); // Difference.
+}
+
+function multiplyNums(x, y) { // Multiplication
+    return (x * y); // Product.
+}
+
+function divideNums(x, y) { // Division.
+    return (x / y); // Quotient.
+}
+function myMath(operation, x, y) {
+    switch (operation) {
+        case "add":
+            return addNums(x, y); //"Return" kills the function, so breaks are optional here.
+        case "substract":
+            return substractNums(x, y);
+        case "multiply":
+            return multiplyNums(x, y);
+        case "divide":
+            return divideNums(x, y);
+        default:
+            return "Invalid operation. ";
+
+    }
+}
+

@@ -47,4 +47,4 @@ newRow.appendChild (actionCell); // This  addes this new cell to the existing ro
 //Target your table body
 var tableBody = document.getElementById ("table-body");
 tableBody.appendChild (newRow);// inject the brand new row, so the user can see it
-}
+} );
