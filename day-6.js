@@ -12,7 +12,7 @@ function myFunction() {
     console.log(myVariable); //Can we see myVariable in the function !?
 
 
-    myFunction(); //Let's run it and  see.  Yes!! We can see GLOBALLY scoped variable inside of a function!
+   // myFunction(); //Let's run it and  see.  Yes!! We can see GLOBALLY scoped variable inside of a function!
 
     var myFunctionScopeVariable = 64; //Declared in a local (function) scope.
     console.log(myFunctionScopeVariable); //Can we access it outside of the function!? We can see it if it's inside the function.
@@ -68,19 +68,44 @@ function multiplyNums(x, y) { // Multiplication
 function divideNums(x, y) { // Division.
     return (x / y); // Quotient.
 }
-function myMath(operation, x, y) {
-    switch (operation) {
+function myMath(operation ) {
+    switch ( operation ) {
         case "add":
-            return addNums(x, y); //"Return" kills the function, so breaks are optional here.
+            return addNums; //"Return" kills the function, so breaks are optional here.
         case "substract":
-            return substractNums(x, y);
+            return substractNums;
         case "multiply":
-            return multiplyNums(x, y);
+            return multiplyNums;
         case "divide":
-            return divideNums(x, y);
+            return divideNums;
         default:
             return "Invalid operation. ";
-
     }
 }
+//console.log( myMath ( "add", 64,6) );
 
+/*var result = myMath( "divide ")(9,3); //result = 3
+console.log( result );
+var newResult = myMath( "multiply" )( 2, result ); //newResult = 6
+console.log( newResult );*/
+
+/**
+ * Now let's try with anonymous functions.
+ */
+
+ function newTestFunction ( myString ) {
+    myString = "Entered string is: " +myString;
+    return function ( additionalString ) {
+        if ( additionalString != undefined ) {
+            myString += ","+additionalString;
+        }
+        return function (yetAnotherString ) {
+            if (yetAnotherString != undefined ) {
+                myString += "," +yetAnotherString + "!!!!";
+            }
+            return myString;
+        }
+    }
+ }
+
+ console.log ( newTestFunction( "A B C D E F G")( " H I J K L M N O P" )( "Q R S T U V W X Y Z") );
