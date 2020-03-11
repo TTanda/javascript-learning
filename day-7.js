@@ -60,3 +60,25 @@ console.log( pairing.next().value );
   console.log( reduceResult );// Because we have strings in here, they are getting concatenated
 
   console.log([1, 2, 3, 4 ].reduce( function ( a, v ) { return a + v; } ) ); // Because we have numbers, they are being added mathmatically.
+
+  /**
+   * Let and Const
+   */
+  var x = 3; // Standard variable declaration. Function-scoped.
+  let y = 7; // Let is block-scoped.
+  const z = 36; // Const is block-scoped, but reassigment is not allowed.
+
+  //z=16; Not allowed! Const must remain with its original assignment.
+  console.log( z );
+
+  y = 13; // Allowed! var and let allow re-assignment.
+  console.log( y );
+
+  for ( var myVar = 0; myVar < 10; myVar ++ ) {
+      console.log( "For loop iteration..." );
+  }
+  for ( let myNewVar = 0; myNewVar < 10; myNewVar ++ ) {//curly braces means that let and Const should be listening to this, and won't happen outside of them.
+    console.log( "For loop iteration..." );
+    console.log( " myNewVar = " +myNewVar );
+}
+//console.log( " myNewVar = " +myNewVar ); // We can't access it outside of the block.

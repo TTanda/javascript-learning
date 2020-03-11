@@ -182,7 +182,7 @@ window.onload = function () {
     // Play
     play = function () {
       categories = [
-          ["everton", "liverpool", "swansea", "chelsea", "hull", "manchester-city", "newcastle-united"],
+          ["apple", "orange", "peach", "cherry", "pear", "banana"],
           ["alien", "dirty-harry", "gladiator", "finding-nemo", "jaws"],
           ["manchester", "milan", "madrid", "amsterdam", "prague"]
       ];
