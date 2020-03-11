@@ -16,5 +16,21 @@ var isMyStringInside = myArray.find( function ( element ) { return element === "
 console.log( isMyStringInside ); // Not found
 
 /**
- * 
+ * .findIndex()
  */
+var findAnIndex = myArray.findIndex( function (element ){ return element === 2; } );
+console.log( findAnIndex ); // This time, it returned the value's INDEX.
+
+/**
+ * .entries()
+ */
+var pairing = myArray.entries();
+console.log( pairing );
+console.log( pairing.next().value );
+console.log( pairing.next().value );
+console.log( pairing.next().value );
+console.log( pairing.next().value );
+console.log( pairing.next().value );
+console.log( pairing.next().value );
+console.log( pairing.next().value );
+
