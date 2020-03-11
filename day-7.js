@@ -82,3 +82,54 @@ console.log( pairing.next().value );
     console.log( " myNewVar = " +myNewVar );
 }
 //console.log( " myNewVar = " +myNewVar ); // We can't access it outside of the block.
+
+/**
+ * Const can't be re-assigned.. but it's insides can be manipulated
+ */
+
+ const myObj = { //as long as the variable myObj isn't being re-assigned (myObj=) then we CAN update, manipulate
+     name: "Henry",
+     age: 18
+ }
+  myObj.name = "Sandy"; //Can we update PROPERTIES or array ELEMENTS inside of a const-declared variable?
+  myObj.hobbies = [];
+  myObj.hobbies.push( "Mountain Climbing" );
+  console.log( myObj);
+
+  /**
+   * Let's shake things up with: FUNCTIONS...
+   * New syntax
+   */
+   //Classic function declaration...
+   function myFunction ( a,b ) {
+       return Number(a) + Number(b);
+   }
+   console.log( myFunction( 3,7 ) );
+
+   //ESC style:
+   myFunction = (a,b ) => Number( a ) + Number ( b );
+   console.log( myFunction( 3, 8 ) ); 
+
+   //Bigger Function
+   myOtherFunction = ( a, b ) => {
+       const myAnswer = Number( a ) + Number( b );
+       return myAnswer;
+   }
+   console.log( myOtherFunction( 34, 6 ) );
+
+   /**
+    * Function default parameter values.
+    */
+// We can set defaults, to prevent errors in case nothing gets passied in for a parameter
+addNums = ( x = 0 , y = 0 ) => x + y;
+
+console.log( addNums() );// No arguements! But our default values kick in!
+
+/**
+ * Rest parameter.
+ */
+
+ findHighNum = ( ...args ) => {
+     console.log( args );
+     return args;
+ }
