@@ -128,8 +128,28 @@ console.log( addNums() );// No arguements! But our default values kick in!
 /**
  * Rest parameter.
  */
-
- findHighNum = ( ...args ) => {
-     console.log( args );
-     return args;
+//Rest parameter MUST BE THE LAST PARAMETER.
+ findHighNum = ( minNum= 0, ...args ) => { //args will capture any number of arguements that we pass!
+    minNum = Number(minNum );
+    if ( minNum === NaN ) minNum = 0;
+    const highNums = args.filter( (element ) => element > minNum );
+    //console.log( args ); //It can be called by the name we had in between our parenthesis.
+     return highNums;
  }
+
+ console.log( findHighNum( 5, 2, 20, 50, 3, 0, 10, 24, -508 ) );
+
+//Getting the sum of ALL numbers passed in!
+ AddAllNums =  ( ...nums ) => nums.reduce( ( a, v ) => a + v );
+    console.log( AddAllNums( 64, 6, 10 ) );
+
+/**
+ * Template Literals
+ */
+ 
+ const helloVar = "Hello, world!";
+ const sampleName = "Sam";
+
+ const myNewString = `Hey there, name is ${sampleName}; I'd like to give you a big: "${helloVar}"!!`;  //The syntax for template literals is: ${variableName}
+//NOTE: This only works inside of backticks.  But is super useful.  It save us from extra concatenation.
+ console.log( myNewString );
