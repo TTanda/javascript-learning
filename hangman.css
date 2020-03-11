@@ -15,8 +15,8 @@ body {
 
 
 canvas{
-  color:$white;
-  border: $white dashed 2px;
+  color:rgb(226, 212, 212);
+  border: rgb(250, 169, 6) solid 2px;
   padding:15px;
 }
 
@@ -84,24 +84,15 @@ p{
 }
 
 button{
-  @include corners (5px);
-  background:$base-color;
-  color:$white;
-  border: solid 1px $white;
+  background:rgb(150, 118, 118);
+  color:rgb(252, 235, 235);
+  border: solid 1px rgb(51, 50, 50);
   text-decoration:none;
   cursor:pointer;
   font-size:1.2em;
   padding:18px 10px;
   width:180px;
   margin: 10px;
-  outline: none;
-  
-    &:hover{
-      @include transition;
-      background:$white;
-      border: solid 1px $white;
-      color:$base-color;
-    }
 }
 
 @media (max-width: 767px) {

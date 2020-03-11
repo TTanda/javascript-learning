@@ -1,4 +1,6 @@
 *{
+    background-color: teal;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     box-sizing: border-box;
@@ -6,8 +8,6 @@
     margin: 0;
 }
 body { padding-top: 3 rem;} /*Offset enough space for the fixed nav. */
-
-
 .gray-text { /* American spelling makes Warren sad :( */
     color: darkgray;
 }
