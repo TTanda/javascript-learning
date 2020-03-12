@@ -7,19 +7,6 @@ body {
   font-size:18px;
 }
 
-.wrappper{
-  
-  width:100%;
-  margin:0 auto;
-}
-
-
-canvas{
-  color:rgb(226, 212, 212);
-  border: rgb(250, 169, 6) solid 2px;
-  padding:15px;
-}
-
 h1, h2, h3 {
 	font-family: 'Rye', cursive;
 	font-weight: 100;
@@ -32,40 +19,40 @@ h1 {
 	font-size: 2.6em;
 }
 
-h2 {
+h2 p {
 	font-size: 1.6em;
 }
 
-p{
-  font-size: 1.6em;
-}
-
 #alphabet {
-  font-family: 'Barrio', cursive;
+  font-family: 'Cabin Sketch', cursive;
   margin:15px auto;
   padding:0;
   max-width:900px;
 }
 
 #alphabet li {
-  font-family: 'Barrio', cursive;
+  font-family: 'Cabin Sketch', cursive;
   float:left;
   margin: 0 10px 10px 0;
   list-style:none;
   width:35px;
   height:30px;
   padding-top:10px;
-  background:rgb(216, 194, 194);
-  color: rgb(102, 54, 54);
-  cursor:pointer;
-  border: solid 1px rgb(19, 18, 18);
+  background:rgb(241, 222, 222);
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  border: solid 1px rgb(126, 37, 37);
+  border-radius: 5px;
+}
+#alphabet li.active {
+  background-color: rgb(139, 20, 20);
+  color: rgb(219, 217, 217);
 }
 
 #my-word {
-  margin: 0;
+  margin: auto;
   display: block;
   padding: 0;
-  display:block;
 }
 
 #my-word li {
@@ -94,6 +81,8 @@ button{
   width:180px;
   margin: 10px;
 }
+
+
 
 @media (max-width: 767px) {
   #alphabet {
