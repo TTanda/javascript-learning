@@ -1,4 +1,7 @@
-
+import { Movie } from"./Movie.Class.js"; // Bring in our file.
+import { BuyableMovie } from"./Buyable.Movie.js";
+import { Calculator } from"./Calculator.Class.js";
+//You'll have to use a server for this to work
 /**
  * Let's see what some of our newer array methods are...
  */
@@ -111,37 +114,36 @@ myFunction = (a, b) => Number(a) + Number(b);
 console.log(myFunction(3, 8));
 
 //Bigger Function
-myOtherFunction = (a, b) => {
+/*myOtherFunction = (a, b) => {
     const myAnswer = Number(a) + Number(b);
     return myAnswer;
 }
-console.log(myOtherFunction(34, 6));
+console.log(myOtherFunction(34, 6));*/
 
 /**
  * Function default parameter values.
  */
 // We can set defaults, to prevent errors in case nothing gets passied in for a parameter
-addNums = (x = 0, y = 0) => x + y;
+//addNums = (x = 0, y = 0) => x + y;
 
-console.log(addNums());// No arguements! But our default values kick in!
+//console.log(addNums());// No arguements! But our default values kick in!
 
 /**
  * Rest parameter.
  */
 //Rest parameter MUST BE THE LAST PARAMETER.
-findHighNum = (minNum = 0, ...args) => { //args will capture any number of arguements that we pass!
-    minNum = Number(minNum);
-    if (minNum === NaN) minNum = 0;
-    const highNums = args.filter((element) => element > minNum);
+//findHighNum = (minNum = 0, ...args) => { //args will capture any number of arguements that we pass!
+    //minNum = Number(minNum);
+    //if (minNum === NaN) minNum = 0;
+    //const highNums = args.filter((element) => element > minNum);
     //console.log( args ); //It can be called by the name we had in between our parenthesis.
-    return highNums;
-}
+    //return highNums;
 
-console.log(findHighNum(5, 2, 20, 50, 3, 0, 10, 24, -508));
+//console.log(findHighNum(5, 2, 20, 50, 3, 0, 10, 24, -508));
 
 //Getting the sum of ALL numbers passed in!
-AddAllNums = (...nums) => nums.reduce((a, v) => a + v);
-console.log(AddAllNums(64, 6, 10));
+//AddAllNums = (...nums) => nums.reduce((a, v) => a + v);
+//console.log(AddAllNums(64, 6, 10));
 
 /**
  * Template Literals
@@ -152,20 +154,20 @@ const sampleName = "Sam";
 
 const myNewString = `Hey there, name is ${sampleName}; I'd like to give you a big: "${helloVar}"!!`;  //The syntax for template literals is: ${variableName}
 //NOTE: This only works inside of backticks.  But is super useful.  It save us from extra concatenation.
-console.log(myNewString);
+//console.log(myNewString);
 
 /**
  * Spread Operator
  * Don't get this confused with the rest parameter.  Both are three dots
  * Remember that rest parameter is always in PARAMETER area of a functions, nowhere else.  Spread is used ANYWHERE else, basically.
  */
-const newArray = ["Hello", ",", "", "World", "!"];
-console.log(newArray);
-console.log(...newArray);//Brought the values in the array together as one (space-separated) string. Or did it?
+//const newArray = ["Hello", ",", "", "World", "!"];
+//console.log(newArray);
+//console.log(...newArray);//Brought the values in the array together as one (space-separated) string. Or did it?
 
 // Spread operator separates into separate values.
-const aBunchofNums = [5, 10, 36, 58];
-console.log(AddAllNums(5, 10, 36, 58));
+//const aBunchofNums = [5, 10, 36, 58];
+//onsole.log(AddAllNums(5, 10, 36, 58));
 //console.log( AddAllNums( ... aBunchOfNums ) ); //Spreading an argument.
 
 /**
@@ -203,40 +205,6 @@ myOrganizeName: {
 }
 //console.log( myFinalResult );
 
-/** 
- * Classes.
- * CHECK OUR IMPORT< THAT"S HOW WE"RE ACCESSING THIS.
- *
- */
-
-class Movie {
-    constructor(name, genre, year) {
-        this.name = name;
-        this.genre = genre;
-        this.year = year;
-    }
-    get name() { // How we retrieve the property. A GETTER
-        return this.name;
-    }
-    set name( newName ) { // How we store a new property value. A SETTER
-        if (typeof newName === "string") {
-            this.name = name;
-        } else {
-            this.name = name.toString();
-        }
-        return this.name;
-    }
-    showPoster() { // This is a method! We can name them as we'd like.
-        const info = `
-             MOVIE INFO 
-            ===========
-            Name: ${this.name}
-            Genre: ${this.genre}
-            Year: ${this.year}
-      `;
-        return info;
-    }
-}
 
 const tron = new Movie("Disney's Tron", "Adventure", 1982);
 const dragonheart = new Movie("Dragonheart", "Medival Fantasy", 1996);
