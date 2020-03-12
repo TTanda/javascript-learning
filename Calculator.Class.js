@@ -1,5 +1,5 @@
 export class Calculator {
-    constructor () {
-        
+    static add (...nums) {
+
     }
 }
